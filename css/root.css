@@ -1,0 +1,68 @@
+:root {
+	--rem-base: 10px;
+	--base-font-size: 20px;
+	--base-line-height: 28px;
+	--vertical-rhythm: calc(var(--base-line-height) * 1em);
+	--brand-color: #1e88e5;
+	--brand-color-dark: #1360a4;
+	--brand-color-light: #63aced;
+	--accent-color: #07c8bc;
+	--accent-color-dark: #047e77;
+	--accent-color-light: #047e77;
+	--base-text-color: #27277c;
+	--base-link-color: #27277c;
+	--animation-duration: 0.3s;
+	--animation-timing-function: ease;
+	--input-x: 20px;
+	--gutter: 25px;
+	--input-color: #6b7280;
+	--input-placeholder-color: #6b7280;
+	--input-bg-color: white;
+	--input-radius: 3px;
+	--input-border-color: #cfcfcf;
+	--input-focus-border-color: #aeaeae;
+	--form-theme-color: #07c8bc;
+	--checkbox-size: 20px;
+	--radio-size: 20px;
+	--label-fz: 14px;
+	--label-color: #6b7280;
+	--error-color: #e04562;
+	--error-bg-color: #fadee3;
+	--form-col-gutter: 15px;
+	--form-row-margin: 22.5px;
+	--h1: 64px;
+	--h2: 48px;
+	--h3: 26px;
+	--h4: 22px;
+	--h5: 20px;
+	--h6: 18px;
+	--btn-y: 15px;
+	--btn-x: 20px;
+	--btn-b: 1px;
+	--btn-r: 0;
+	--btn-fz: 16px;
+}
+@media (max-width: 1023px) {
+	:root {
+		--h1: 64px;
+		--h2: 40px;
+		--h3: 24px;
+		--h4: 22px;
+		--h5: 20px;
+		--h6: 16px;
+	}
+}
+@media (max-width: 667px) {
+	:root {
+		--btn-y: 15px;
+		--btn-x: 20px;
+		--btn-b: 1px;
+		--btn-r: 0;
+		--btn-fz: 16px;
+	}
+}
+@media (min-width: 812px) and (max-height: 414px) and (orientation: landscape) {
+	:root {
+		--gutter: 50px;
+	}
+}
