@@ -97,10 +97,15 @@ function initCardSlider() {
 		const self = this;
 		var swiper = new Swiper(this, {
 			slidesPerView: 'auto',
-			spaceBetween: 32,
+			spaceBetween: 18,
 			navigation: {
-				nextEl: $(self).closest('section').find(".slider-nav__next").get(0),
-				prevEl: $(self).closest('section').find(".slider-nav__prev").get(0),
+				nextEl: $(self).closest('.slider-wrap').find(".slider-nav__next").get(0),
+				prevEl: $(self).closest('.slider-wrap').find(".slider-nav__prev").get(0),
+			},
+			breakpoints: {
+			  1024: {
+				spaceBetween: 32,
+			  },
 			},
 		});
 	});
