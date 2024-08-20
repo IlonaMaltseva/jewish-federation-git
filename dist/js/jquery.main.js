@@ -2,11 +2,13 @@ var $ = jQuery.noConflict();
 jQuery(function () {
 	isElementExist(".hero-slider", initHeroSlider);
 	isElementExist(".article-slider", initCardSlider);
+	isElementExist(".gallery-slider", initGallerySlider);
 
 	initMenu();
 	initSearchForm();
 	headerScrollUp();
 	initAccordion();
+	initCustomForms();
 });
 
 //-------- -------- -------- --------
@@ -89,6 +91,19 @@ function initHeroSlider() {
 	});
 }
 
+function initGallerySlider() {
+	$(".gallery-slider").each(function () {
+		const self = this;
+		var swiper = new Swiper(this, {
+			slidesPerView: 'auto',
+			spaceBetween: 10,
+			navigation: {
+				nextEl: $(self).closest('.gallery-slider').find(".slider-nav__next").get(0),
+				prevEl: $(self).closest('.gallery-slider').find(".slider-nav__prev").get(0),
+			},
+		});
+	});
+}
 
 function initCardSlider() {
 	$(".article-slider").each(function () {
@@ -125,6 +140,16 @@ function initAccordion() {
 			$(this).closest('.accordion__item').find('.accordion__expanded').stop().slideUp();
 		}
 	});
+}
+
+// initialize custom form elements (checkbox, radio, select) https://github.com/w3co/jcf
+function initCustomForms() {
+	jcf.setOptions('Select', {
+		maxVisibleItems: 8, // visible dropdown items before scroll appear
+		wrapNative: false,
+	});
+
+	jcf.replaceAll();
 }
 
 //-------- -------- -------- --------
