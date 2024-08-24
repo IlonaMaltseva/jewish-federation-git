@@ -3,12 +3,12 @@
 	--base-font-size: 20px;
 	--base-line-height: 28px;
 	--vertical-rhythm: calc(var(--base-line-height) * 1em);
-	--brand-color: #1e88e5;
-	--brand-color-dark: #1360a4;
-	--brand-color-light: #63aced;
-	--accent-color: #07c8bc;
-	--accent-color-dark: #047e77;
-	--accent-color-light: #047e77;
+	--brand-color: #27277c;
+	--brand-color-dark: #151542;
+	--brand-color-light: #3939b6;
+	--accent-color: #1e3eaf;
+	--accent-color-dark: #13276e;
+	--accent-color-light: #13276e;
 	--base-text-color: #27277c;
 	--base-link-color: #27277c;
 	--animation-duration: 0.3s;

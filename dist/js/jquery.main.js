@@ -4,6 +4,7 @@ jQuery(function () {
 	isElementExist(".article-slider", initCardSlider);
 	isElementExist(".gallery-slider", initGallerySlider);
 
+	initWow();
 	initMenu();
 	initSearchForm();
 	headerScrollUp();
@@ -27,6 +28,19 @@ function isElementExist(_el, _cb) {
 		}
 	}
 }
+
+function initWow() {
+	wow = new WOW(
+		{
+			boxClass: 'wow',
+			animateClass: 'animated',
+			offset: 0,
+			mobile: false,
+			live: true
+		}
+	)
+	wow.init();
+};
 
 function initMenu(){
 	$('.menu__item').each(function () {
