@@ -61,7 +61,7 @@ function initMenu(){
 	$('.nav-opener').on('click', function(e) {
 		e.preventDefault();
 		$('body').toggleClass('nav-active');
-	})
+	});
 };
 
 function initSearchForm() {
@@ -101,6 +101,13 @@ function initHeroSlider() {
 		const self = this;
 		var swiper = new Swiper(this, {
 			slidesPerView: 'auto',
+			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
+			autoplay: {
+				delay: 5000,
+			},
 		});
 	});
 }

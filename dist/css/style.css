@@ -419,8 +419,9 @@ button[type=submit]:hover .icon {
 	color: #27277c;
 }
 .btn--light:hover {
-	border-color: #fff;
-	background-color: #fff;
+	border-color: #cff3f1;
+	background-color: #27277c;
+	color: #cff3f1;
 }
 .btn--white {
 	border-color: #fff;
@@ -3541,6 +3542,7 @@ body {
 }
 .angle-bottom--bg-offset::before {
 	bottom: 173px;
+	margin-bottom: 1px;
 }
 .angle-bottom--offset::before {
 	bottom: 155px;
@@ -3581,18 +3583,6 @@ body {
 	margin-bottom: 30px;
 }
 
-.angle-slider {
-	position: absolute;
-	bottom: -1px;
-	left: 0;
-	right: 0;
-	z-index: 9;
-	height: 120px;
-	background-color: #fff;
-	-webkit-clip-path: polygon(100% 0%, -193% 100%, 100% 100%);
-	        clip-path: polygon(100% 0%, -193% 100%, 100% 100%);
-}
-
 .hero-slide {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -3616,6 +3606,8 @@ body {
 	left: 0;
 	right: 0;
 	z-index: -1;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 58%, 0 72%);
+	        clip-path: polygon(0 0, 100% 0, 100% 58%, 0 72%);
 }
 .hero-slide__bg img {
 	display: block;
@@ -3643,6 +3635,14 @@ body {
 	z-index: 11;
 	padding: 23px 13px;
 }
+.hero-slide__headline--line {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
 .hero-slide__headline h2 {
 	font-weight: normal;
 	letter-spacing: -1px;
@@ -3669,25 +3669,21 @@ body {
 @-webkit-keyframes fadeInLeftSlide {
 	from {
 		opacity: 0;
-		-webkit-transform: translate3d(-100%, 0, 0);
-		        transform: translate3d(-100%, 0, 0);
+		width: 0;
 	}
 	to {
 		opacity: 1;
-		-webkit-transform: none;
-		        transform: none;
+		width: 100%;
 	}
 }
 @keyframes fadeInLeftSlide {
 	from {
 		opacity: 0;
-		-webkit-transform: translate3d(-100%, 0, 0);
-		        transform: translate3d(-100%, 0, 0);
+		width: 0;
 	}
 	to {
 		opacity: 1;
-		-webkit-transform: none;
-		        transform: none;
+		width: 100%;
 	}
 }
 .section-intro {
@@ -4427,10 +4423,6 @@ body {
 	padding-top: 24px;
 }
 
-.accordion-content {
-	padding-top: 16px;
-}
-
 .accordion-col {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -4650,6 +4642,10 @@ body {
 .post-head__meta a {
 	display: inline-block;
 	position: relative;
+	text-decoration: none;
+}
+.post-head__meta a:hover {
+	text-decoration: underline;
 }
 .post-head__meta a:first-child::after {
 	content: "|";
@@ -5139,7 +5135,9 @@ body {
 }
 
 .btn-search {
-	display: none !important;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
@@ -5425,6 +5423,12 @@ body.nav-active .nav-opener:before {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 }
+.footer-contact a {
+	text-decoration: none;
+}
+.footer-contact a:hover {
+	text-decoration: underline;
+}
 
 .social {
 	display: -webkit-box;
@@ -5473,6 +5477,7 @@ body.nav-active .nav-opener:before {
 }
 .footer-menu__link {
 	color: #e0f2ff;
+	text-decoration: none;
 }
 .footer-menu__link:hover {
 	text-decoration: underline;
@@ -5610,6 +5615,9 @@ body.nav-active .nav-opener:before {
 	}
 	.header-search .form-control:-ms-input-placeholder {
 		color: #c0c0d2;
+	}
+	.btn-search {
+		display: none !important;
 	}
 	.nav-active {
 		overflow: hidden;
@@ -5973,22 +5981,26 @@ body.nav-active .nav-opener:before {
 	.hero-slider {
 		margin-bottom: 0;
 	}
-	.angle-slider {
-		height: 160px;
-		-webkit-clip-path: polygon(100% 0%, -15% 100%, 100% 100%);
-		        clip-path: polygon(100% 0%, -15% 100%, 100% 100%);
-	}
 	.hero-slide {
 		min-height: 671px;
 		padding: 180px 0;
 	}
+	.hero-slide__bg {
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
+		        clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
+	}
 	.swiper-slide-active .hero-slide__bg {
+		-webkit-animation: fadeInSlide 0.35s ease 0.35s both;
+		        animation: fadeInSlide 0.35s ease 0.35s both;
+	}
+	.swiper-slide-active .hero-slide__headline--line {
+		-webkit-animation: fadeInLeftSlide 0.35s ease 0.35s both;
+		        animation: fadeInLeftSlide 0.35s ease 0.35s both;
+	}
+	.swiper-slide-active .hero-slide__headline h2 {
+		opacity: 0;
 		-webkit-animation: fadeInSlide 1s ease 0.35s both;
 		        animation: fadeInSlide 1s ease 0.35s both;
-	}
-	.swiper-slide-active .hero-slide__headline {
-		-webkit-animation: fadeInLeftSlide 1s ease 0.35s both;
-		        animation: fadeInLeftSlide 1s ease 0.35s both;
 	}
 	.section-intro {
 		padding: 72px 0 160px;
@@ -6383,9 +6395,6 @@ body.nav-active .nav-opener:before {
 		fill: #1c1b1f;
 	}
 	.btn-search {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
 		right: 0;
 		left: auto;
 		width: 73px;
