@@ -3981,7 +3981,10 @@ body {
 	background-color: #fff;
 	color: #27277c;
 }
-.article-card:hover.bg--light-blue {
+.article-card:hover.bg--light-blue,
+.article-card:hover.bg--light-grey,
+.article-card:hover.bg--light-purple,
+.article-card:hover.bg--light-orange {
 	background-color: #27277c;
 	color: #fff;
 }
@@ -5803,9 +5806,14 @@ body.nav-active .nav-opener:before {
 	.section-hero__btns button[type=submit] {
 		width: auto;
 	}
+	.hero-slider {
+		margin-bottom: 0;
+	}
 	.hero-slide {
 		min-height: 440px;
-		padding-bottom: 40px;
+	}
+	.hero-slide__headline {
+		margin-bottom: 80px;
 	}
 	.section-intro__bg {
 		height: 400px;
@@ -5978,9 +5986,6 @@ body.nav-active .nav-opener:before {
 		right: 0;
 		left: 0;
 	}
-	.hero-slider {
-		margin-bottom: 0;
-	}
 	.hero-slide {
 		min-height: 671px;
 		padding: 180px 0;
@@ -5992,6 +5997,9 @@ body.nav-active .nav-opener:before {
 	.swiper-slide-active .hero-slide__bg {
 		-webkit-animation: fadeInSlide 0.35s ease 0.35s both;
 		        animation: fadeInSlide 0.35s ease 0.35s both;
+	}
+	.hero-slide__headline {
+		margin-bottom: 0;
 	}
 	.swiper-slide-active .hero-slide__headline--line {
 		-webkit-animation: fadeInLeftSlide 0.35s ease 0.35s both;
