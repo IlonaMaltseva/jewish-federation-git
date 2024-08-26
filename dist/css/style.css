@@ -3599,6 +3599,18 @@ body {
 	position: relative;
 	min-height: 290px;
 }
+.hero-slide::before {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	height: 40px;
+	background-color: #fff;
+	-webkit-clip-path: polygon(100% 0%, -15% 100%, 100% 100%);
+	        clip-path: polygon(100% 0%, -15% 100%, 100% 100%);
+}
 .hero-slide__bg {
 	position: absolute;
 	top: 0;
@@ -3606,8 +3618,6 @@ body {
 	left: 0;
 	right: 0;
 	z-index: -1;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 58%, 0 72%);
-	        clip-path: polygon(0 0, 100% 0, 100% 58%, 0 72%);
 }
 .hero-slide__bg img {
 	display: block;
@@ -5990,9 +6000,8 @@ body.nav-active .nav-opener:before {
 		min-height: 671px;
 		padding: 180px 0;
 	}
-	.hero-slide__bg {
-		-webkit-clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
-		        clip-path: polygon(0 0, 100% 0, 100% 76%, 0% 100%);
+	.hero-slide::before {
+		height: 160px;
 	}
 	.swiper-slide-active .hero-slide__bg {
 		-webkit-animation: fadeInSlide 0.35s ease 0.35s both;

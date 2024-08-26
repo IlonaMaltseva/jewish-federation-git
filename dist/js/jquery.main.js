@@ -34,7 +34,7 @@ function initWow() {
 		{
 			boxClass: 'wow',
 			animateClass: 'animated',
-			offset: 0,
+			offset: 200,
 			mobile: false,
 			live: true
 		}

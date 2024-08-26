@@ -13,19 +13,19 @@
 	--base-link-color: #27277c;
 	--animation-duration: 0.3s;
 	--animation-timing-function: ease;
-	--input-x: 20px;
+	--input-x: 40px;
 	--gutter: 25px;
-	--input-color: #6b7280;
+	--input-color: #27277c;
 	--input-placeholder-color: #6b7280;
 	--input-bg-color: white;
-	--input-radius: 3px;
-	--input-border-color: #cfcfcf;
-	--input-focus-border-color: #aeaeae;
+	--input-radius: 8px;
+	--input-border-color: #d7d7e6;
+	--input-focus-border-color: #aeaecd;
 	--form-theme-color: #07c8bc;
 	--checkbox-size: 20px;
 	--radio-size: 20px;
 	--label-fz: 16px;
-	--label-color: #6b7280;
+	--label-color: #27277c;
 	--error-color: #e04562;
 	--error-bg-color: #fadee3;
 	--form-col-gutter: 15px;
@@ -36,8 +36,8 @@
 	--h4: 22px;
 	--h5: 20px;
 	--h6: 18px;
-	--btn-y: 15px;
-	--btn-x: 20px;
+	--btn-y: 12px;
+	--btn-x: 40px;
 	--btn-b: 1px;
 	--btn-r: 0;
 	--btn-fz: 16px;
@@ -54,8 +54,8 @@
 }
 @media (max-width: 667px) {
 	:root {
-		--btn-y: 15px;
-		--btn-x: 20px;
+		--btn-y: 12px;
+		--btn-x: 40px;
 		--btn-b: 1px;
 		--btn-r: 0;
 		--btn-fz: 16px;
