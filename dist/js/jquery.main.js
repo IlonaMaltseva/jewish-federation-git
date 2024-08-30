@@ -106,7 +106,14 @@ function initHeroSlider() {
 				crossFade: true
 			},
 			autoplay: {
-				delay: 5000,
+				delay: 3500,
+			},
+			breakpoints: {
+			  1024: {
+					autoplay: {
+						delay: 5000,
+					},
+				},
 			},
 		});
 	});
